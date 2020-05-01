@@ -53,12 +53,7 @@ namespace HSATest
 		}
 		public override bool isNotNull()
 		{
-			if (FirstName == null || LastName == null || BirthDate == null || PlanType == null || EffectiveDate == null)
-			{
-				return false;
-			}
-
-			return true;
+			return (FirstName == null || LastName == null || BirthDate == null || PlanType == null || EffectiveDate == null) ? false : true;
 		}
 
 		public override bool isValidBirthDate()
@@ -91,23 +86,20 @@ namespace HSATest
 
 		public override bool isValidPlan()
 		{
-			if (PlanType == "HSA" || PlanType == "HRA" || PlanType == "FSA")
-				return true;
-			return false;
+			return (PlanType == "HSA" || PlanType == "HRA" || PlanType == "FSA") ? true : false;
 		}
 
 		public bool validEntry()
 		{
-			if(isNotNull() && isValidBirthDate() && isValidEffectiveDate() && isValidPlan())
-				return true;
-			return false;
+			return (isNotNull() && isValidBirthDate() && isValidEffectiveDate() && isValidPlan()) ? true : false;
 		}
 		
 		private bool isEighteen()
 		{
+			int years = 18;
 			DateTime currentDate = DateTime.Now;
 			DateTime birthday = DateTime.ParseExact(BirthDate, "MMddyyyy", CultureInfo.InvariantCulture);
-			int age = birthday.AddYears(18).CompareTo(currentDate);
+			int age = birthday.AddYears(years).CompareTo(currentDate);
 			if (age <= 0)
 				return true;
 			return false;
@@ -115,9 +107,10 @@ namespace HSATest
 
 		private bool allowedTimeFrame()
 		{
+			int days = 30;
 			DateTime currentDate = DateTime.Now;
 			DateTime startDate = DateTime.ParseExact(EffectiveDate, "MMddyyyy", CultureInfo.InvariantCulture);
-			int period = currentDate.AddDays(30).CompareTo(startDate);
+			int period = currentDate.AddDays(days).CompareTo(startDate);
 			if (period >= 0)
 				return true;
 			return false;
