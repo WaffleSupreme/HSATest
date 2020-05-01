@@ -1,0 +1,10 @@
+C:\Git\HSATest\HSATest\bin\Debug\netcoreapp3.1\HSATest.exe
+C:\Git\HSATest\HSATest\bin\Debug\netcoreapp3.1\HSATest.deps.json
+C:\Git\HSATest\HSATest\bin\Debug\netcoreapp3.1\HSATest.runtimeconfig.json
+C:\Git\HSATest\HSATest\bin\Debug\netcoreapp3.1\HSATest.runtimeconfig.dev.json
+C:\Git\HSATest\HSATest\bin\Debug\netcoreapp3.1\HSATest.dll
+C:\Git\HSATest\HSATest\bin\Debug\netcoreapp3.1\HSATest.pdb
+C:\Git\HSATest\HSATest\obj\Debug\netcoreapp3.1\HSATest.AssemblyInfoInputs.cache
+C:\Git\HSATest\HSATest\obj\Debug\netcoreapp3.1\HSATest.AssemblyInfo.cs
+C:\Git\HSATest\HSATest\obj\Debug\netcoreapp3.1\HSATest.dll
+C:\Git\HSATest\HSATest\obj\Debug\netcoreapp3.1\HSATest.pdb
